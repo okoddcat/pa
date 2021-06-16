@@ -1,28 +1,56 @@
-# Pa
+# 爬 Pa
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pa`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ranging activities of Github repos.
 
-TODO: Delete this and the text above, and describe your gem
+
 
 ## Installation
 
-Add this line to your application's Gemfile:
+### Install as an executable file
 
-```ruby
-gem 'pa'
+```shell
+gem install geiyepa
 ```
 
-And then execute:
 
-    $ bundle install
 
-Or install it yourself as:
+### Setup
 
-    $ gem install pa
+1. Tell `geiyepa` the repos which you want to scrape
+
+    ```shell
+    mkdir -p ~/.pa/cache
+    echo "mtanneb/pa" >> ~/.pa/repos
+    ```
+
+2. Export your Github token to console
+
+    ```shell
+    export TOKEN="YOUR GITHUB TOKEN"
+    ```
 
 ## Usage
 
-TODO: Write usage instructions here
+```shell
+$ pa
+
+"mtanneb/pa"
+MESSAGE                           | AUTHOR     | DATE
+----------------------------------|------------|--------------------------
+feat: create a gem package        | Martin Tan | 2021-06-16 14:20:53 +0800
+feat: add cache and github client | Martin Tan | 2021-06-16 12:19:22 +0800
+Init                              | Martin Tan | 2021-06-16 12:00:41 +0800
+```
+
+
+
+The defualt timezone is UTC+8, you can customize it by the following command.
+
+```shell
+export TIMEZONE="Asia/Shanghai"
+```
+
+
 
 ## Development
 
@@ -32,7 +60,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pa. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/pa/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/mtanneb/pa. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/mtanneb/pa/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -41,4 +69,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Pa project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/pa/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Pa project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/mtanneb/pa/blob/master/CODE_OF_CONDUCT.md).
