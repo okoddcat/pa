@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'Pa'
+
+Pa::App.repos.each do |repo|
+  ap repo
+
+  commits = {}
+  Pa::Client.branches(repo).each do |branch|
+    c = Pa::App.cache.fetch("branches/#{branch.commit.sha}", 60 * 60 * 24 * 7 * 30) do
+      Pa::Client.commits(repo, branch.name).to_json
+    end
+    commits.merge! JSON.parse c, symbolize_names: true
+  end
+
+  Pa::Client.puts commits
+end

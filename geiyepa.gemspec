@@ -1,7 +1,7 @@
 require_relative 'lib/pa/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pa"
+  spec.name          = "geiyepa"
   spec.version       = Pa::VERSION
   spec.authors       = ["Martin Tan"]
   # spec.email         = ["TODO: Write your email address"]
