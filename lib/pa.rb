@@ -1,4 +1,5 @@
 require "pa/version"
+require "application"
 
 module Pa
   class Error < StandardError; end
